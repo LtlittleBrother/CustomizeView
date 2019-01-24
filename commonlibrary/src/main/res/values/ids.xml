@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="statusbar_view" type="id" />
+    <item name="translucent_view" type="id" />
+    <item name="imageCycle_view" type="id" />
+    <item name="cb_item_tag" type="id" />
+
+    <!-- chad -->
+    <item name="BaseQuickAdapter_viewholder_support" type="id" />
+    <item name="BaseQuickAdapter_swiping_support" type="id" />
+    <item name="BaseQuickAdapter_dragging_support" type="id" />
+    <item name="BaseQuickAdapter_databinding_support" type="id" />
+
+    <!-- sticky_nav_layout -->
+    <item name="id_stickynavlayout_topview" type="id" />
+    <item name="id_stickynavlayout_viewpager" type="id" />
+    <item name="id_stickynavlayout_indicator" type="id" />
+    <item name="id_stickynavlayout_innerscrollview" type="id" />
+
+    <item name="statusbarutil_fake_status_bar_view" type="id" />
+    <item name="statusbarutil_translucent_view" type="id" />
+
+    <item name="bettermovementmethod_highlight_background_span" type="id" />
+
+    <!--vlayout-->
+    <item name="dianyou_common_tag_layout_helper_bg" type="id" />
+
+    <!--房间列表群头像-->
+    <item name="composition_drawable_1" type="id" />
+    <item name="composition_drawable_2" type="id" />
+    <item name="composition_drawable_3" type="id" />
+    <item name="composition_drawable_4" type="id" />
+    <item name="composition_drawable_5" type="id" />
+
+
+    <item type="id" name="expandable_text"/>
+    <item type="id" name="expand_collapse"/>
+    <item type="id" name="expand_dot"/>
+
+    <item name="tag_layout_helper_bg" type="id" />
+
+    <item name="float_ball_image_flag" type="id" />
+</resources>

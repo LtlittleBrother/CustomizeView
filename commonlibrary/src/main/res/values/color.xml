@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--修改应用整体配色时，只需要修改主题色和运行按钮点按颜色即可-->
+    <!--修改主题色start-->
+    <!--主题色-->
+    <color name="colorPrimary">#ff655a</color>
+    <color name="colorPrimaryDark">#ff655a</color>
+    <color name="colorPrimary_click">#a62217</color>
+    <color name="colorPrimary_alpha">#99ff655a</color>
+
+    <color name="run_btn_press_color">#4dcfaa</color> <!--直接运行按钮点按颜色-->
+
+    <color name="dy_common_title_bkg">@color/white</color> <!--通用标题背景色-->
+    <color name="dy_common_title_main_txt_bkg">@color/dianyou_color_333333</color> <!--通用主标题字体色-->
+    <color name="dy_common_title_second_txt_bkg">@color/dianyou_color_666666</color> <!--通用次标题字体色-->
+    <!--修改主题色end-->
+
+    <color name="common_fragment_bkg">#f7f7f7</color> <!--通用页面背景灰色-->
+    <color name="common_dividing_line">#e0e0e0</color> <!--通用分割线颜色-->
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="black_transparent_50">#80000000</color> <!-- %50黑 -->
+    <color name="black_transparent_40">#66000000</color> <!-- 40%黑 -->
+    <color name="black_transparent_25">#40000000</color> <!-- 25%黑 -->
+
+    <color name="white_no_transparent_28">#1cffffff</color> <!-- 不透明28%白 -->
+    <color name="white_no_transparent_70">#b3ffffff</color> <!-- 不透明70%白 -->
+    <color name="white_no_transparent_50">#80ffffff</color> <!-- 不透明50%白 -->
+    <color name="white_no_transparent_40">#66ffffff</color> <!-- 不透明40%白 -->
+    <color name="white_no_transparent_33">#33ffffff</color>
+    <color name="white_no_transparent_4d">#4dffffff</color> <!-- 不透明30%白 -->
+
+    <color name="dianyou_im_bubble_fill_color">#ffdedc</color>
+    <color name="dianyou_im_bubble_border_color">#ffc2bd</color>
+
+    <color name="dialogplus_black_overlay">#60000000</color>
+
+    <color name="dianyou_color_e2e2e2">#e2e2e2</color>
+    <color name="dianyou_color_919191">#919191</color>
+    <color name="dianyou_color_f9f9f9">#f9f9f9</color>
+    <color name="dianyou_color_d52b2c">#d52b2c</color>
+    <color name="dianyou_color_ffffff">#ffffff</color>
+    <color name="dianyou_color_faa124">#faa124</color>
+    <color name="dianyou_color_dbdbdb">#dbdbdb</color>
+    <color name="dianyou_common_rectangle_solid_ff5548_stroke">#ff5548</color>1c9ffb
+    <color name="dianyou_color_1c9ffb">#1c9ffb</color>
+    <color name="dianyou_color_ff5548">#ff5548</color>
+    <color name="dianyou_color_fa820d">#fa820d</color>
+    <color name="dianyou_color_80ff5548">#80ff5548</color>
+    <color name="dianyou_color_333333">#333333</color>
+    <color name="dianyou_color_eeeff3">#eeeff3</color>
+    <color name="dianyou_color_999999">#999999</color>
+    <color name="dianyou_color_80000000">#80000000</color>
+    <color name="dianyou_color_90000000">#90000000</color>
+    <color name="dianyou_color_666666">#666666</color>
+    <color name="dianyou_color_396ca5">#396ca5</color>
+    <color name="dianyou_color_cccccc">#cccccc</color>
+    <color name="dianyou_color_576b95">#576b95</color>
+    <color name="dianyou_color_408be6">#408be6</color>
+    <color name="dianyou_color_6eafff">#6eafff</color>
+    <color name="dianyou_color_aaaaaa">#aaaaaa</color>
+    <color name="dianyou_color_ececec">#ececec</color>
+    <color name="dianyou_color_575757">#575757</color>
+    <color name="dianyou_color_545d69">#545d69</color>
+    <color name="dianyou_color_e0e0e0">#e0e0e0</color>
+    <color name="dianyou_color_e6e6e6">#e6e6e6</color>
+    <color name="dianyou_color_b3b3b3">#b3b3b3</color>
+    <color name="dianyou_color_ff8400">#ff8400</color>
+    <color name="dianyou_color_ff8548">#ff8548</color>
+    <color name="dianyou_color_ff4040">#ff4040</color>
+    <color name="dianyou_color_ff7f63">#ff7f63</color>
+    <color name="dianyou_color_fb5858">#fb5858</color>
+    <color name="dianyou_color_808080">#808080</color>
+    <color name="dianyou_color_848484">#848484</color>
+    <color name="dianyou_color_00b7ed">#00b7ed</color>
+    <color name="dianyou_color_fe4a4b">#fe4a4b</color>
+    <color name="dianyou_color_656565">#656565</color>
+    <color name="dianyou_color_0d0d0d">#0d0d0d</color>
+    <color name="dianyou_color_000000">#000000</color>
+    <color name="dianyou_color_444444">#444444</color>
+    <color name="dianyou_color_ededed">#ededed</color>
+    <color name="dianyou_color_b6b6b6">#b6b6b6</color>
+    <color name="dianyou_color_1b9ef9">#1b9ef9</color>
+    <color name="dianyou_color_0bcf99">#0bcf99</color>
+    <color name="dianyou_color_d2d2d2">#d2d2d2</color>
+    <color name="dianyou_color_f0f0f0">#f0f0f0</color>
+    <color name="dianyou_color_00ba85">#00ba85</color>
+    <color name="dianyou_color_ff1010">#ff1010</color>
+    <color name="dianyou_color_ff8700">#ff8700</color>
+    <color name="dianyou_color_f7f7f7">#f7f7f7</color>
+    <color name="dianyou_color_f7bd74">#f7bd74</color>
+    <color name="dianyou_color_f8958c">#f8958c</color>
+    <color name="dianyou_color_71d4c0">#71d4c0</color>
+    <color name="dianyou_color_77bdee">#77bdee</color>
+    <color name="dianyou_color_29ab91">#29ab91</color>
+    <color name="dianyou_color_1c8fe0">#1c8fe0</color>
+    <color name="dianyou_color_f1594b">#f1594b</color>
+    <color name="dianyou_color_f39927">#f39927</color>
+    <color name="dianyou_color_fffefe">#fffefe</color>
+    <color name="dianyou_color_c5f3e6">#c5f3e6</color>
+    <color name="dianyou_color_e5f8f3">#e5f8f3</color>
+    <color name="dianyou_color_dadce3">#dadce3</color>
+    <color name="dianyou_color_f0eff5">#f0eff5</color>
+    <color name="dianyou_color_e8e8e8">#e8e8e8</color>
+    <color name="dianyou_color_20d6a5">#20d6a5</color>
+    <color name="dianyou_color_e4e6ea">#e4e6ea</color>
+    <color name="dianyou_color_fe8b37">#fe8b37</color>
+    <color name="dianyou_color_f85959">#f85959</color>
+    <color name="dianyou_color_fcdb70">#fcdb70</color>
+    <color name="dianyou_color_1a1a1a">#1a1a1a</color>
+    <color name="dianyou_color_ffdfdf">#ffdfdf</color>
+    <color name="dianyou_color_e6eef5">#e6eef5</color>
+    <color name="dianyou_color_3377aa">#3377aa</color>
+    <color name="dianyou_color_4b608d">#4b608d</color>
+    <color name="dianyou_color_626de0">#626de0</color>
+    <color name="dianyou_color_6adeff">#6adeff</color>
+    <!--<color name="dianyou_color_86d45f">#86d45f</color>
+    <color name="dianyou_color_a0e759">#a0e759</color>-->
+    <color name="dianyou_color_f23a3a">#f23a3a</color>
+    <color name="dianyou_color_2a223c">#2a223c</color>
+    <color name="dianyou_color_afafaf">#afafaf</color>
+    <color name="dianyou_color_222222">#222222</color>
+    <color name="dianyou_color_00bb6e">#00bb6e</color>
+    <color name="dianyou_color_2e3132">#2e3132</color>
+    <color name="dianyou_color_302e3b">#302e3b</color>
+    <color name="dianyou_color_cc3c3a4e">#cc3c3a4e</color>
+    <color name="dianyou_color_a7a3b6">#a7a3b6</color>
+    <color name="dianyou_color_383454">#383454</color>
+    <color name="dianyou_color_5560c4">#5560c4</color>
+    <color name="dianyou_color_ff6666">#ff6666</color>
+    <color name="dianyou_color_ff6a24">#ff6a24</color>
+    <color name="dianyou_color_fe8831">#fe8831</color>
+    <color name="dianyou_color_646e82">#646e82</color>
+    <color name="dianyou_color_7cb633">#7cb633</color>
+    <color name="dianyou_color_ffeb04">#ffeb04</color>
+    <color name="dianyou_color_ffe5d8">#ffe5d8</color>
+    <color name="dianyou_color_76c3ff">#76c3ff</color>
+    <color name="dianyou_color_f2f2f2">#f2f2f2</color>
+    <color name="dianyou_color_61d4b3">#61d4b3</color>
+    <color name="dianyou_color_000005">#000005</color>
+    <color name="dianyou_color_898989">#898989</color>
+    <color name="dianyou_color_f95c06">#f95c06</color>
+    <color name="dianyou_color_ffeb00">#ffeb00</color>
+    <color name="dianyou_color_d31111">#d31111</color>
+    <color name="dianyou_color_352410">#352410</color>
+    <color name="dianyou_color_9c9c9c">#9c9c9c</color>
+    <color name="dianyou_color_fc4b3a">#fc4b3a</color>
+    <color name="dianyou_color_de3619">#de3619</color>
+    <color name="dianyou_color_e65746">#e65746</color>
+    <color name="dianyou_color_1f5813">#1f5813</color>
+    <color name="dianyou_color_505050">#505050</color>
+    <color name="dianyou_color_f6eedd">#f6eedd</color>
+    <color name="dianyou_color_11a120">#11a120</color>
+    <color name="dianyou_color_cfcfcf">#cfcfcf</color>
+    <color name="dianyou_color_fd0000">#fd0000</color>
+    <color name="dianyou_color_ff0101">#ff0101</color>
+    <color name="dianyou_color_d3d3d3">#d3d3d3</color>
+    <color name="dianyou_color_fd8938">#fd8938</color>
+    <color name="dianyou_color_e1e1e1">#e1e1e1</color>
+    <color name="dianyou_color_fdc6bf">#fdc6bf</color>
+    <color name="dianyou_color_fcc129">#fcc129</color>
+    <color name="dianyou_color_f23756">#f23756</color>
+    <color name="dianyou_color_e2e5ee">#e2e5ee</color>
+    <color name="dianyou_color_ff3b2f">#ff3b2f</color>
+    <color name="dianyou_color_cecece">#cecece</color>
+    <color name="dianyou_color_2e99f5">#2e99f5</color>
+    <color name="dianyou_color_303030">#303030</color>
+    <color name="dianyou_color_fdfdfd">#fdfdfd</color>
+    <color name="dianyou_color_ff0000">#ff0000</color>
+    <color name="dianyou_color_eeeeee">#eeeeee</color>
+    <color name="dianyou_color_ffb801">#ffb801</color>
+    <color name="dianyou_color_ff7979">#ff7979</color>
+    <color name="dianyou_color_eaeaef">#eaeaef</color>
+    <color name="dianyou_color_c7c7cc">#c7c7cc</color>
+    <color name="dianyou_color_f5f5f7">#f5f5f7</color>
+    <color name="dianyou_color_c1c1c7">#c1c1c7</color>
+    <color name="dianyou_color_67a42f">#67a42f</color>
+    <color name="dianyou_color_fed64d">#fed64d</color>
+    <color name="dianyou_color_f6d49a">#f6d49a</color>
+    <color name="dianyou_color_f6b6b4">#f6b6b4</color>
+    <color name="dianyou_color_e54c41">#e54c41</color>
+    <color name="dianyou_color_cccbc8">#cccbc8</color>
+    <color name="dianyou_color_df821e">#df821e</color>
+    <color name="dianyou_color_efeff4">#efeff4</color>
+    <color name="dianyou_color_1188f0">#1188f0</color>
+    <color name="dianyou_color_818181">#818181</color>
+    <color name="dianyou_color_302f2f">#302f2f</color>
+    <color name="dianyou_color_0f88ec">#0f88ec</color>
+    <color name="dianyou_color_9490da">#9490da</color>
+    <color name="dianyou_color_7fc369">#7fc369</color>
+    <color name="dianyou_color_d9d9d9">#d9d9d9</color>
+    <color name="dianyou_color_373373">#373373</color>
+    <color name="dianyou_color_888888">#888888</color>
+    <color name="dianyou_color_009bff">#009bff</color>
+    <color name="dianyou_color_f5f5f5">#f5f5f5</color>
+    <color name="dianyou_color_00c5b9">#00c5b9</color>
+    <color name="dianyou_color_ff2a00">#ff2a00</color>
+    <color name="dianyou_color_e5e5e5">#e5e5e5</color>
+    <color name="dianyou_color_0390eb">#0390eb</color>
+    <color name="dianyou_color_33d1c7">#33d1c7</color>
+    <color name="dianyou_color_008c77">#008c77</color>
+    <color name="dianyou_color_3c3a4f">#3c3a4f</color>
+    <color name="dianyou_color_ff8076">#ff8076</color>
+    <color name="dianyou_color_a1a1a1">#a1a1a1</color>
+    <color name="dianyou_color_c1c1c1">#c1c1c1</color>
+    <color name="dianyou_color_fffffe">#fffffe</color>
+    <color name="dianyou_color_ffa048">#ffa048</color>
+    <color name="dianyou_color_cc6c0c">#cc6c0c</color>
+    <color name="dianyou_color_ffdedc">#ffdedc</color>
+    <color name="dianyou_color_ffc2bd">#ffc2bd</color>
+    <color name="dianyou_color_507daf">#507daf</color>
+    <color name="dianyou_color_ffd52b">#ffd52b</color>
+    <color name="dianyou_color_904610">#904610</color>
+    <color name="dianyou_color_ffef42">#ffef42</color>
+    <color name="dianyou_color_3b87e6">#3b87e6</color>
+    <color name="dianyou_color_5f302c">#5f302c</color>
+    <color name="dianyou_color_17529d">#17529d</color>
+    <color name="dianyou_color_e83808">#e83808</color>
+    <color name="dianyou_color_c43008">#c43008</color>
+    <color name="dianyou_color_4dabf5">#4dabf5</color>
+    <color name="dianyou_color_bba047">#bba047</color>
+    <color name="dianyou_color_0099ff">#0099ff</color>
+    <color name="dianyou_color_7a8c96">#7a8c96</color>
+    <color name="dianyou_color_d7d7d7">#d7d7d7</color>
+    <color name="dianyou_color_242424">#242424</color>
+    <color name="dianyou_color_242629">#242629</color>
+    <color name="dianyou_color_006cfe">#006cfe</color>
+    <color name="dianyou_color_d04237">#d04237</color>
+    <color name="dianyou_color_b1b1b1">#b1b1b1</color>
+    <color name="dianyou_color_d8d8d8">#d8d8d8</color>
+    <color name="dianyou_color_ff5447">#ff5447</color>
+    <color name="dianyou_color_fcb497">#fcb497</color>
+    <color name="dianyou_color_fe7d4c">#fe7d4c</color>
+    <color name="dianyou_color_ffb699">#ffb699</color>
+    <color name="dianyou_color_4590e5">#4590e5</color>
+    <color name="dianyou_color_60403d">#60403d</color>
+    <color name="dianyou_color_1caa3d">#1caa3d</color>
+    <color name="dianyou_color_fceceb">#fceceb</color>
+    <color name="dianyou_color_c9c9c9">#c9c9c9</color>
+    <color name="dianyou_color_ffd700">#ffd700</color>
+    <color name="dianyou_color_99000000">#99000000</color>
+    <color name="dianyou_color_a07572">#a07572</color>
+    <color name="dianyou_color_dddddd">#dddddd</color>
+    <color name="dianyou_color_3c3a4e">#3c3a4e</color>
+    <color name="dianyou_color_fa9d3b">#fa9d3b</color>
+    <color name="dianyou_color_53c97e">#53c97e</color>
+    <color name="dianyou_color_ff7f6e">#ff7f6e</color>
+    <color name="dianyou_color_b3000000">#b3000000</color>
+    <color name="dianyou_color_b3e0e0e0">#b3e0e0e0</color>
+    <color name="dianyou_color_19a0ff">#19a0ff</color>
+    <color name="dianyou_color_ffd884">#ffd884</color>
+    <color name="dianyou_color_ffd284">#ffd284</color>
+    <color name="dianyou_color_ff4d4d">#ff4d4d</color>
+    <color name="dianyou_color_ec3939">#ec3939</color>
+    <color name="dianyou_color_6a2d0c">#6a2d0c</color>
+    <color name="dianyou_color_ff3101">#ff3101</color>
+    <color name="dianyou_color_aa5201">#aa5201</color>
+    <color name="dianyou_color_ffe484">#ffe484</color>
+    <color name="dianyou_color_f7932e">#f7932e</color>
+
+
+
+
+
+
+
+
+
+
+    <!--以下为未整理过的色值，已整理的色值请规范命名加上备注后放到此注释上放-->
+
+
+    <color name="common_content">#808080</color>
+
+    <color name="common_line">#cccccc</color>
+
+
+    <color name="colorAccent">#00000000</color>
+
+    <!-- 主框架 -->
+    <color name="line">#d6d6d6</color>
+
+    <!-- fragment -->
+    <color name="title_font_p">#00ba85</color>
+
+    <!-- controller -->
+    <!--<color name="font_color_detail">#8b8b8b</color>-->
+    <color name="font_color_title">#3e3e3e</color>
+    <!--<color name="line_h">#e2e2e2</color>-->
+
+    <color name="gray">#f8f8f8</color>
+
+    <color name="text_little_gray_color">#d9d9d9</color>
+    <color name="text_little_green_color">#33d1c7</color>
+    <color name="btn_more_green_color">#00ba85</color>
+    <color name="btn_little_green_1_color">#77d9d3</color>
+    <color name="btn_more_green_color_alph">#9900c5b9</color>
+
+    <color name="gray_b2">#b2b2b2</color>
+
+
+    <!-- 所有页面背景颜色 -->
+    <color name="all_bg_color">#EFF1F3</color>
+
+    <color name="translucent">#50000000</color>
+    <!-- 半透明的颜色 -->
+    <color name="translucent80">#A0000000</color>
+
+
+    <color name="dianyou_ptrlistview_red">#FFC93437</color>
+    <color name="dianyou_ptrlistview_blue">#FF375BF1</color>
+    <color name="dianyou_ptrlistview_yellow">#FFF7D23E</color>
+    <color name="dianyou_ptrlistview_green">#FF34A350</color>
+    <!--<color name="apppart_detail_gray">#848484</color>-->
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="gray_dedede">#dedede</color>
+
+    <!-- 游戏详情-->
+    <!--<color name="game_search_link">#00c5b9</color>-->
+    <color name="game_search_bg">#f2f2f2</color>
+    <color name="game_score_progress">#ff8500</color>
+    <!-- 游戏排行-->
+    <!-- 游戏运行-->
+    <color name="game_app_run_progressbar_bg">#a2e8de</color>
+
+    <color name="dianyou_toast_background_dark">#aa000000</color>
+    <color name="dianyou_dialog_msg_color">#FF999999</color>
+    <color name="dianyou_dialog_btn_color">#666666</color>
+
+    <color name="dianyou_game_classify_list_bg_color">#ebebeb</color>
+    <!-- -->
+    <color name="dianyou_guide_bkg_line_black">#3A3A3A</color>
+    <color name="dianyou_guide_bkg_font_yellow">#FFFF02</color>
+
+    <color name="dianyou_more_green">#00afa4</color>
+
+    <color name="status_color_red">#fe0000</color>
+
+    <drawable name="img_loading_default_color">#f7f7f7</drawable>
+
+    <color name="dianyou_app_run_text">#fffcc2</color>
+
+    <color name="common_title">#333333</color>
+
+    <!--游戏圈-->
+    <!--活动-->
+    <color name="dianyou_game_circle_type_activity">#82c042</color>
+    <!--游戏-->
+    <color name="dianyou_game_circle_type_game">#3799e0</color>
+    <!--礼包-->
+    <color name="dianyou_game_circle_type_gifts">#ffa801</color>
+
+    <color name="color_8290AF">#8290AF</color>
+    <color name="color_666666">#666666</color>
+    <color name="im_social_dig_name_bg">#DDDDDD</color>
+    <color name="im_font_color_text_hint">#f7f7f7</color>`
+    <color name="bg_no_photo">#EEEEEE</color>
+    <color name="color_green_00a777">#00a777</color>
+
+    <color name="red_light">#ffff4444</color>
+    <color name="color_ea5f39">#ea5f39</color>
+    <color name="green_light">#ff99cc00</color>
+    <color name="orange_light">#ffffbb33</color>
+    <color name="blue_light">#ff33b5e5</color>
+
+    <color name="test">#ff33b5e5</color>
+
+    <color name="dialog_bg_color">#f6f6f6</color> <!-- 背景 -->
+    <color name="black_d3">#333333</color>
+    <color name="dialog_gray_color">#666666</color> <!-- 灰色文字字体 -->
+    <color name="dialog_btn_gray_color">#999999</color> <!-- 灰色按钮正常 -->
+    <color name="dialog_line_color">#e1e1e1</color> <!-- 灰色线 -->
+
+    <color name="dev_iclap_cube_mints_black">#000000</color>
+
+    <color name="red_envelopes_tag">#c7fbea</color>
+
+    <!--通知栏SmallIcon小图标 和应用名称颜色 -->
+    <color name="dianyou_notification_color">#ff5548</color>
+
+    <color name="timetimepicker_default_text_color">#999999</color>
+    <color name="timepicker_toolbar_bg">#FFFFFF</color>
+    <color name="timepicker_dialog_bg">#80000000</color>
+    <color name="timepicker_line">#e8e8e8</color>
+    <color name="dianyou_im_demonstrate_float_view_bkg">#363636</color>
+
+</resources>

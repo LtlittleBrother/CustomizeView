@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.customizeview.view.DrawColorView
+        android:id="@+id/draw_color_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawCircleView
+        android:id="@+id/draw_circle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawArcView
+        android:id="@+id/draw_arc_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawLineView
+        android:id="@+id/draw_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawOvalView
+        android:id="@+id/draw_oval_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawPathView
+        android:id="@+id/draw_path_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawPointView
+        android:id="@+id/draw_point_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawRectView
+        android:id="@+id/draw_rect_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawRoundRectView
+        android:id="@+id/draw_round_rect_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawHistogramView
+        android:id="@+id/draw_histogram_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view.DrawPieChartView
+        android:id="@+id/draw_pie_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</LinearLayout>
