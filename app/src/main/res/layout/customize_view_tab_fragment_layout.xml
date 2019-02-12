@@ -5,6 +5,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_50_dip"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/dianyou_color_222222"
+        android:gravity="center"/>
+
     <com.customizeview.view.DrawColorView
         android:id="@+id/draw_color_view"
         android:layout_width="match_parent"

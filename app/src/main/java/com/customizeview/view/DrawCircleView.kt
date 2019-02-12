@@ -17,10 +17,27 @@ class DrawCircleView :View{
 
     override fun draw(canvas: Canvas?) {
         super.draw(canvas)
-        var paint = Paint()
+        val paint = Paint()
+        /**实心圆*/
         paint.style = Paint.Style.FILL //设置绘制模式
-        paint.color = Color.YELLOW // 设置颜色
-        canvas!!.drawCircle(400f,400f,200f,paint)
+        paint.color = Color.BLACK // 设置颜色
+        paint.isAntiAlias = true
+        canvas!!.drawCircle(300f,200f,200f,paint)
 
+        /**空心圆*/
+        paint.style = Paint.Style.STROKE //设置绘制模式
+        paint.color = Color.BLACK // 设置颜色
+        canvas.drawCircle(800f,200f,200f,paint)
+
+        /**蓝色实心圆*/
+        paint.style = Paint.Style.FILL //设置绘制模式
+        paint.color = Color.BLUE // 设置颜色
+        canvas.drawCircle(300f,800f,200f,paint)
+
+        /**线宽为 20 的空心圆*/
+        paint.style = Paint.Style.STROKE
+        paint.color = Color.BLUE
+        paint.strokeWidth = 20f
+        canvas.drawCircle(800f,800f,200f,paint)
     }
 }

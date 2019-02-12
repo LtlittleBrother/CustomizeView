@@ -16,8 +16,13 @@ class DrawRoundRectView :View{
         super.draw(canvas)
         var paint = Paint()
         paint.style = Paint.Style.FILL //设置绘制模式
-        paint.color = Color.YELLOW // 设置颜色
-        paint.strokeWidth = 12f // 设置线的宽度
+        paint.isAntiAlias = true
+        paint.color = Color.BLACK // 设置颜色
+        canvas!!.drawRoundRect(50f,50f,400f,400f,30f,30f,paint)
+
+        paint.style = Paint.Style.STROKE
+        paint.color = Color.BLUE
+        canvas.drawRoundRect(650f,50f,1000f,400f,30f,30f,paint)
 
 
     }

@@ -60,7 +60,6 @@ class MainActivity : BaseActivity() {
         mViewPager.currentItem = 0
         mViewPager.adapter = tabAdapter
         mTabLayout.setupWithViewPager(mViewPager)
-        mViewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(mTabLayout))
     }
 
     override fun initUI() {

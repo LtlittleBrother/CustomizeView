@@ -16,8 +16,9 @@ class DrawLineView :View{
         super.draw(canvas)
         var paint = Paint()
         paint.style = Paint.Style.FILL //设置绘制模式
-        paint.color = Color.YELLOW // 设置颜色
+        paint.color = Color.BLACK // 设置颜色
         paint.strokeWidth = 12f // 设置线的宽度
+        canvas!!.drawLine(50f,50f,800f,50f,paint)
 
 
     }
