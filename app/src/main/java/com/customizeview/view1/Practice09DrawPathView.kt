@@ -1,4 +1,4 @@
-package com.customizeview.view
+package com.customizeview.view1
 
 import android.content.Context
 import android.graphics.Canvas
@@ -11,7 +11,7 @@ import android.view.View
 /**前面的这些方法，都是绘制某个给定的图形，而 drawPath() 可以绘制自定义图形。当你要绘制的图形比较特殊，使用前面的那些方法做不到的时候，就可以使用 drawPath() 来绘制*/
 /**drawPath(path) 这个方法是通过描述路径的方式来绘制图形的，它的 path 参数就是用来描述图形路径的对象。path 的类型是 Path ，使用方法大概像下面这样：*/
 
-class DrawPathView :View{
+class Practice09DrawPathView :View{
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)

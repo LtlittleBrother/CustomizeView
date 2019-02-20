@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.customizeview.R
-import com.customizeview.view.*
+import com.customizeview.view1.*
 
 
 class CustomizeViewTabFragment : Fragment(){
@@ -25,17 +25,17 @@ class CustomizeViewTabFragment : Fragment(){
     private lateinit var mTitle: TextView
 
     /**view*/
-    private lateinit var arcView: DrawArcView
-    private lateinit var circleViewView: DrawCircleView
-    private lateinit var colorView: DrawColorView
-    private lateinit var histogramView: DrawHistogramView
-    private lateinit var lineView: DrawLineView
-    private lateinit var ovalView: DrawOvalView
-    private lateinit var pathView: DrawPathView
-    private lateinit var pointView: DrawPointView
-    private lateinit var rectView: DrawRectView
-    private lateinit var roundRectView: DrawRoundRectView
-    private lateinit var pieChartView: DrawPieChartView
+    private lateinit var arcViewPractice08: Practice08DrawArcView
+    private lateinit var circleViewPractice02: Practice02DrawCircleView
+    private lateinit var colorViewPractice01: Practice01DrawColorView
+    private lateinit var histogramViewPractice10: Practice10DrawHistogramView
+    private lateinit var lineViewPractice06: Practice06DrawLineView
+    private lateinit var ovalViewPractice05: Practice05DrawOvalView
+    private lateinit var pathViewPractice09: Practice09DrawPathView
+    private lateinit var pointViewPractice04: Practice04DrawPointView
+    private lateinit var rectViewPractice03: Practice03DrawRectView
+    private lateinit var roundRectViewPractice07: Practice07DrawRoundRectView
+    private lateinit var pieChartViewPractice11: Practice11DrawPieChartView
 
     fun newInstance(data: String): CustomizeViewTabFragment{
         val fragment = CustomizeViewTabFragment()
@@ -58,50 +58,62 @@ class CustomizeViewTabFragment : Fragment(){
     @SuppressLint("SetTextI18n")
     fun findView(mView: View){
         mTitle = mView.findViewById(R.id.title_tv)
-        if (data == "DrawColorView"){
-            mTitle.text = "练习内容：使用 canvas.drawColor() 方法把 View 涂成黄色"
-            colorView = mView.findViewById(R.id.draw_color_view)
-            colorView.visibility = View.VISIBLE
-        }else if (data == "DrawCircleView"){
-            mTitle.text = "练习内容：1.实心圆 2.空心圆 3.蓝色实心圆 4.线宽为 20 的空心圆"
-            circleViewView = mView.findViewById(R.id.draw_circle_view)
-            circleViewView.visibility = View.VISIBLE
-        }else if (data == "DrawRectView"){
-            mTitle.text = "练习内容：使用 canvas.drawRect() 方法画矩形"
-            rectView = mView.findViewById(R.id.draw_rect_view)
-            rectView.visibility = View.VISIBLE
-        }else if (data == "DrawPointView"){
-            mTitle.text = "一个圆点，一个方点"
-            pointView = mView.findViewById(R.id.draw_point_view)
-            pointView.visibility = View.VISIBLE
-        }else if (data == "DrawOvalView"){
-            mTitle.text = "练习内容：使用 canvas.drawOval() 方法画椭圆"
-            ovalView = mView.findViewById(R.id.draw_oval_view)
-            ovalView.visibility = View.VISIBLE
-        }else if (data == "DrawLineView"){
-            mTitle.text = "练习内容：使用 canvas.drawLine() 方法画直线"
-            lineView = mView.findViewById(R.id.draw_line_view)
-            lineView.visibility = View.VISIBLE
-        }else if (data == "DrawRoundRectView"){
-            mTitle.text = "练习内容：使用 canvas.drawRoundRect() 方法画圆角矩形"
-            roundRectView = mView.findViewById(R.id.draw_round_rect_view)
-            roundRectView.visibility = View.VISIBLE
-        }else if (data == "DrawArcView"){
-            mTitle.text = "练习内容：使用 canvas.drawArc() 方法画弧形和扇形"
-            arcView = mView.findViewById(R.id.draw_arc_view)
-            arcView.visibility = View.VISIBLE
-        }else if (data == "DrawPathView"){
-            mTitle.text = "练习内容：使用 canvas.drawPath() 方法画心形"
-            pathView = mView.findViewById(R.id.draw_path_view)
-            pathView.visibility = View.VISIBLE
-        }else if (data == "DrawHistogramView"){
-            mTitle.text = "练习内容：使用各种 Canvas.drawXXX() 方法画直方图"
-            histogramView = mView.findViewById(R.id.draw_histogram_view)
-            histogramView.visibility = View.VISIBLE
-        }else if (data == "DrawPieChartView"){
-            mTitle.text = "练习内容：使用各种 Canvas.drawXXX() 方法画饼图"
-            pieChartView = mView.findViewById(R.id.draw_pie_chart_view)
-            pieChartView.visibility = View.VISIBLE
+        when (data) {
+            "Practice01DrawColorView" -> {
+                mTitle.text = "练习内容：使用 canvas.drawColor() 方法把 View 涂成黄色"
+                colorViewPractice01 = mView.findViewById(R.id.draw_color_view)
+                colorViewPractice01.visibility = View.VISIBLE
+            }
+            "Practice02DrawCircleView" -> {
+                mTitle.text = "练习内容：1.实心圆 2.空心圆 3.蓝色实心圆 4.线宽为 20 的空心圆"
+                circleViewPractice02 = mView.findViewById(R.id.draw_circle_view)
+                circleViewPractice02.visibility = View.VISIBLE
+            }
+            "Practice03DrawRectView" -> {
+                mTitle.text = "练习内容：使用 canvas.drawRect() 方法画矩形"
+                rectViewPractice03 = mView.findViewById(R.id.draw_rect_view)
+                rectViewPractice03.visibility = View.VISIBLE
+            }
+            "Practice04DrawPointView" -> {
+                mTitle.text = "一个圆点，一个方点"
+                pointViewPractice04 = mView.findViewById(R.id.draw_point_view)
+                pointViewPractice04.visibility = View.VISIBLE
+            }
+            "Practice05DrawOvalView" -> {
+                mTitle.text = "练习内容：使用 canvas.drawOval() 方法画椭圆"
+                ovalViewPractice05 = mView.findViewById(R.id.draw_oval_view)
+                ovalViewPractice05.visibility = View.VISIBLE
+            }
+            "Practice06DrawLineView" -> {
+                mTitle.text = "练习内容：使用 canvas.drawLine() 方法画直线"
+                lineViewPractice06 = mView.findViewById(R.id.draw_line_view)
+                lineViewPractice06.visibility = View.VISIBLE
+            }
+            "Practice07DrawRoundRectView" -> {
+                mTitle.text = "练习内容：使用 canvas.drawRoundRect() 方法画圆角矩形"
+                roundRectViewPractice07 = mView.findViewById(R.id.draw_round_rect_view)
+                roundRectViewPractice07.visibility = View.VISIBLE
+            }
+            "Practice08DrawArcView" -> {
+                mTitle.text = "练习内容：使用 canvas.drawArc() 方法画弧形和扇形"
+                arcViewPractice08 = mView.findViewById(R.id.draw_arc_view)
+                arcViewPractice08.visibility = View.VISIBLE
+            }
+            "Practice09DrawPathView" -> {
+                mTitle.text = "练习内容：使用 canvas.drawPath() 方法画心形"
+                pathViewPractice09 = mView.findViewById(R.id.draw_path_view)
+                pathViewPractice09.visibility = View.VISIBLE
+            }
+            "Practice10DrawHistogramView" -> {
+                mTitle.text = "练习内容：使用各种 Canvas.drawXXX() 方法画直方图"
+                histogramViewPractice10 = mView.findViewById(R.id.draw_histogram_view)
+                histogramViewPractice10.visibility = View.VISIBLE
+            }
+            "Practice11DrawPieChartView" -> {
+                mTitle.text = "练习内容：使用各种 Canvas.drawXXX() 方法画饼图"
+                pieChartViewPractice11 = mView.findViewById(R.id.draw_pie_chart_view)
+                pieChartViewPractice11.visibility = View.VISIBLE
+            }
         }
     }
 
@@ -123,7 +135,7 @@ class CustomizeViewTabFragment : Fragment(){
         super.setUserVisibleHint(isVisibleToUser)
     }
 
-    fun lazyLoad(){
+    private fun lazyLoad(){
         if (mIsPrepare || mIsVisible || !mIsFirstLoad){
             return
         }
@@ -132,7 +144,7 @@ class CustomizeViewTabFragment : Fragment(){
         mIsFirstLoad = false
     }
 
-    fun loadData(){
+    private fun loadData(){
 
     }
 

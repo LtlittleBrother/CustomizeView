@@ -1,4 +1,4 @@
-package com.customizeview.view
+package com.customizeview.view1
 
 import android.content.Context
 import android.graphics.Canvas
@@ -6,11 +6,10 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
-import java.util.*
 
 //        综合练习
 //        练习内容：使用各种 Canvas.drawXXX() 方法画直方图
-class DrawHistogramView :View{
+class Practice10DrawHistogramView :View{
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)

@@ -1,4 +1,4 @@
-package com.customizeview.view
+package com.customizeview.view1
 
 import android.content.Context
 import android.graphics.Canvas
@@ -9,7 +9,7 @@ import android.view.View
 //        练习内容：使用 canvas.drawColor() 方法把 View 涂成黄色
 //        黄色： Color.YELLOW
 
-class DrawColorView : View{
+class Practice01DrawColorView : View{
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)

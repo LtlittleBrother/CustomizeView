@@ -59,6 +59,7 @@ public class CommonTitleView extends ConstraintLayout implements View.OnClickLis
 
     public void setRightItemText(String text){
         mRightItemTv.setText(text);
+        mRightItemTv.setVisibility(VISIBLE);
     }
 
     public void setRightItemTextColor(int res){

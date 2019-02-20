@@ -2,6 +2,7 @@ package com.customizeview.activity
 
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
+import com.customizeview.dialog.MoreDialog
 import com.customizeview.R
 import com.customizeview.adapter.CustomizeViewTabFgAdapter
 import com.fiction.activity.BaseActivity
@@ -35,19 +36,20 @@ class MainActivity : BaseActivity() {
             }
 
             override fun onRightClick() {
-
+                val dialog = MoreDialog(this@MainActivity)
+                dialog.show()
             }
         })
     }
 
 
-    fun initChannelView(){
+    private fun initChannelView(){
         tabAdapter = CustomizeViewTabFgAdapter(supportFragmentManager)
         initPageData()
         initChannerlUi()
     }
 
-    fun initPageData(){
+    private fun initPageData(){
         setList()
         if (mList.isNotEmpty()){
             for (str: String in mList){
@@ -56,7 +58,7 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    fun initChannerlUi(){
+    private fun initChannerlUi(){
         mViewPager.currentItem = 0
         mViewPager.adapter = tabAdapter
         mTabLayout.setupWithViewPager(mViewPager)
@@ -65,24 +67,25 @@ class MainActivity : BaseActivity() {
     override fun initUI() {
         mCommonTitleView.setLeftCloseIvVisibility(true)
         mCommonTitleView.setCenterTitleText("自定义VIEW")
+        mCommonTitleView.setRightItemText("更多")
     }
 
     override fun initData() {
         initChannelView()
     }
 
-    fun setList(){
-        mList.add("DrawColorView")
-        mList.add("DrawCircleView")
-        mList.add("DrawRectView")
-        mList.add("DrawPointView")
-        mList.add("DrawOvalView")
-        mList.add("DrawLineView")
-        mList.add("DrawRoundRectView")
-        mList.add("DrawArcView")
-        mList.add("DrawPathView")
-        mList.add("DrawHistogramView")
-        mList.add("DrawPieChartView")
+    private fun setList(){
+        mList.add("Practice01DrawColorView")
+        mList.add("Practice02DrawCircleView")
+        mList.add("Practice03DrawRectView")
+        mList.add("Practice04DrawPointView")
+        mList.add("Practice05DrawOvalView")
+        mList.add("Practice06DrawLineView")
+        mList.add("Practice07DrawRoundRectView")
+        mList.add("Practice08DrawArcView")
+        mList.add("Practice09DrawPathView")
+        mList.add("Practice10DrawHistogramView")
+        mList.add("Practice11DrawPieChartView")
     }
 
 }

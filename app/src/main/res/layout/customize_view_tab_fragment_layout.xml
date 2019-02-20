@@ -13,70 +13,71 @@
         android:textColor="@color/dianyou_color_222222"
         android:gravity="center"/>
 
-    <com.customizeview.view.DrawColorView
+    <com.customizeview.view1.Practice01DrawColorView
         android:id="@+id/draw_color_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
 
-    <com.customizeview.view.DrawCircleView
+    <com.customizeview.view1.Practice02DrawCircleView
         android:id="@+id/draw_circle_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
 
-    <com.customizeview.view.DrawArcView
-        android:id="@+id/draw_arc_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
-
-    <com.customizeview.view.DrawLineView
-        android:id="@+id/draw_line_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
-
-    <com.customizeview.view.DrawOvalView
-        android:id="@+id/draw_oval_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
-
-    <com.customizeview.view.DrawPathView
-        android:id="@+id/draw_path_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
-
-    <com.customizeview.view.DrawPointView
-        android:id="@+id/draw_point_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
-
-    <com.customizeview.view.DrawRectView
+    <com.customizeview.view1.Practice03DrawRectView
         android:id="@+id/draw_rect_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
 
-    <com.customizeview.view.DrawRoundRectView
+    <com.customizeview.view1.Practice04DrawPointView
+        android:id="@+id/draw_point_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view1.Practice05DrawOvalView
+        android:id="@+id/draw_oval_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view1.Practice06DrawLineView
+        android:id="@+id/draw_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view1.Practice07DrawRoundRectView
         android:id="@+id/draw_round_rect_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
 
-    <com.customizeview.view.DrawHistogramView
+    <com.customizeview.view1.Practice08DrawArcView
+        android:id="@+id/draw_arc_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view1.Practice09DrawPathView
+        android:id="@+id/draw_path_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view1.Practice10DrawHistogramView
         android:id="@+id/draw_histogram_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
 
-    <com.customizeview.view.DrawPieChartView
+    <com.customizeview.view1.Practice11DrawPieChartView
         android:id="@+id/draw_pie_chart_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
+
 
 </LinearLayout>

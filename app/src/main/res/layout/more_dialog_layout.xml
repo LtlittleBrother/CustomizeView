@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/game_center_dimen_300_dip"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+    <TextView
+        android:id="@+id/two_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_45_dip"
+        android:text="自定义view2"
+        android:textColor="@color/dianyou_color_222222"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"/>
+
+    <TextView
+        android:id="@+id/three_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_45_dip"
+        android:text="自定义view3"
+        android:textColor="@color/dianyou_color_222222"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"/>
+
+    <TextView
+        android:id="@+id/four_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_45_dip"
+        android:text="自定义view4"
+        android:textColor="@color/dianyou_color_222222"
+        android:gravity="center"/>
+
+</LinearLayout>
