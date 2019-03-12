@@ -16,8 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.CustomizeViewTwo"
-            android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activity.CustomizeViewTwo"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".activity.TimeSelectorActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ImageViewActivity">
+        </activity>
     </application>
 
 </manifest>

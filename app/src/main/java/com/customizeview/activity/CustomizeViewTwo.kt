@@ -84,6 +84,7 @@ class CustomizeViewTwo: BaseActivity() {
         mList.add("Practice04BitmapShaderView")
         mList.add("Practice05ComposeShaderView")
         mList.add("Practice06LightingColorFilterView")
+        mList.add("Practice06PorterDuffColorFilter")
         mList.add("Practice07ColorMatrixColorFilterView")
         mList.add("Practice08XfermodeView")
         mList.add("Practice09StrokeCapView")

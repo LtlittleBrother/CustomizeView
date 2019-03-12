@@ -29,11 +29,11 @@ class Practice05ComposeShaderView: View{
         val shader1 = BitmapShader(bitmap1, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP)
 
         // 第二个 Shader：从上到下的线性渐变（由透明到黑色）
-        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.dianyou_game_ic_my_dynamic)
+        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.dianyou_red_long)
         val shader2 = BitmapShader(bitmap2, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP)
 
         // ComposeShader：结合两个 Shader
-        val shader = ComposeShader(shader1, shader2, PorterDuff.Mode.DST_OUT)
+        val shader = ComposeShader(shader1, shader2, PorterDuff.Mode.DST_IN)
         paint.shader = shader
         canvas!!.drawCircle(500f,500f,400f,paint)
     }

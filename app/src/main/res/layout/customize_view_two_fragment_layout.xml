@@ -48,6 +48,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
+    <com.customizeview.view2.Practice06PorterDuffColorFilter
+        android:id="@+id/porter_duff_color_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
     <com.customizeview.view2.Practice07ColorMatrixColorFilterView
         android:id="@+id/color_matrix_color_filter_view"
         android:layout_width="match_parent"

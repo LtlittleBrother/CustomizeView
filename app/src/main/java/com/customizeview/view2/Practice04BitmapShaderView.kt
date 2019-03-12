@@ -24,6 +24,7 @@ class Practice04BitmapShaderView: View{
         super.draw(canvas)
         val paint = Paint()
         val bitmap = BitmapFactory.decodeResource(resources, R.drawable.dianyou_game_ic_my_dynamic)
+
         val shaderClamp = BitmapShader(bitmap,Shader.TileMode.CLAMP,Shader.TileMode.CLAMP)
         paint.shader = shaderClamp
         canvas!!.drawRect(100f,100f,400f,400f,paint)

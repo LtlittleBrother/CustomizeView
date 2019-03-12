@@ -33,6 +33,7 @@ class CustomizeViewTwoFragment : Fragment(){
     private lateinit var practice04BitmapShaderView: Practice04BitmapShaderView
     private lateinit var practice05ComposeShaderView: Practice05ComposeShaderView
     private lateinit var practice06LightingColorFilterView: Practice06LightingColorFilterView
+    private lateinit var practice06PorterDuffColorFilter: Practice06PorterDuffColorFilter
     private lateinit var practice07ColorMatrixColorFilterView: Practice07ColorMatrixColorFilterView
     private lateinit var practice08XfermodeView: Practice08XfermodeView
     private lateinit var practice09StrokeCapView: Practice09StrokeCapView
@@ -93,6 +94,10 @@ class CustomizeViewTwoFragment : Fragment(){
             "Practice06LightingColorFilterView" -> {
                 practice06LightingColorFilterView = mView.findViewById(R.id.lighting_color_filter_view)
                 practice06LightingColorFilterView.visibility = View.VISIBLE
+            }
+            "practice06PorterDuffColorFilter" -> {
+                practice06PorterDuffColorFilter = mView.findViewById(R.id.porter_duff_color_filter)
+                practice06PorterDuffColorFilter.visibility = View.VISIBLE
             }
             "Practice07ColorMatrixColorFilterView" -> {
                 practice07ColorMatrixColorFilterView = mView.findViewById(R.id.color_matrix_color_filter_view)
