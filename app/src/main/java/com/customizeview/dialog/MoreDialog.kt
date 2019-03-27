@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.customizeview.R
+import com.customizeview.activity.CustomizeViewThree
 import com.customizeview.activity.CustomizeViewTwo
 import com.fiction.util.ToastUtil
 
@@ -33,8 +34,8 @@ class MoreDialog: Dialog, View.OnClickListener{
         dismiss()
         when {
             v!!.id == R.id.two_tv -> context.startActivity(CustomizeViewTwo.toCustomizeViewTwo(context))
-            v.id == R.id.three_tv -> ToastUtil.showToast(context,"自定义View3")
-            v.id == R.id.four_tv -> ToastUtil.showToast(context,"自定义View4")
+            v.id == R.id.three_tv -> CustomizeViewThree.toCustomizeViewThreePage(context)
+            v.id == R.id.four_tv -> ToastUtil.showToast(context,"敬请期待")
         }
     }
 }

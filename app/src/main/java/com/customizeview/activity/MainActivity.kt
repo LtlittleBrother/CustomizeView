@@ -66,7 +66,7 @@ class MainActivity : BaseActivity() {
 
     override fun initUI() {
         mCommonTitleView.setLeftCloseIvVisibility(true)
-        mCommonTitleView.setCenterTitleText("自定义VIEW")
+        mCommonTitleView.setCenterTitleText("自定义 View 1-1 绘制基础")
         mCommonTitleView.setRightItemText("更多")
     }
 

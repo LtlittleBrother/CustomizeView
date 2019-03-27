@@ -24,6 +24,8 @@
                 android:screenOrientation="portrait"/>
         <activity android:name=".activity.ImageViewActivity">
         </activity>
+        <activity android:name=".activity.CustomizeViewThree">
+        </activity>
     </application>
 
 </manifest>

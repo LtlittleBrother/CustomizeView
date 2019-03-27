@@ -13,94 +13,76 @@
         android:textColor="@color/dianyou_color_222222"
         android:gravity="center"/>
 
-    <com.customizeview.view2.Practice00View
-        android:id="@+id/practice00_view"
+    <com.customizeview.view3.Practice01DrawTextView
+        android:id="@+id/practice01_draw_text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice01LinearGradientView
-        android:id="@+id/linear_gradient_view"
+    <com.customizeview.view3.Practice02StaticLayoutView
+        android:id="@+id/practice02_static_layout_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice02RadialGradientView
-        android:id="@+id/radial_gradient_view"
+    <com.customizeview.view3.Practice03SetTextSizeView
+        android:id="@+id/practice03_set_text_size_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice03SweepGradientView
-        android:id="@+id/sweep_gradient_view"
+    <com.customizeview.view3.Practice04SetTypefaceView
+        android:id="@+id/practice04_set_type_face_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice04BitmapShaderView
-        android:id="@+id/bitmap_shader_view"
+    <com.customizeview.view3.Practice05SetFakeBoldTextView
+        android:id="@+id/practice05_set_fake_bold_text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice05ComposeShaderView
-        android:id="@+id/compose_shader_view"
+    <com.customizeview.view3.Practice06SetStrikeThruTextView
+        android:id="@+id/practice06_set_strike_thru_text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice06LightingColorFilterView
-        android:id="@+id/lighting_color_filter_view"
+    <com.customizeview.view3.Practice07SetUnderlineTextView
+        android:id="@+id/practice07_set_under_line_text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice06PorterDuffColorFilter
-        android:id="@+id/porter_duff_color_filter"
+    <com.customizeview.view3.Practice08SetTextSkewXView
+        android:id="@+id/practice08_set_text_skew_x_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice07ColorMatrixColorFilterView
-        android:id="@+id/color_matrix_color_filter_view"
+    <com.customizeview.view3.Practice09SetTextScaleXView
+        android:id="@+id/practice09_set_text_scale_x_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice08XfermodeView
-        android:id="@+id/xfermode_view"
+    <com.customizeview.view3.Practice10SetTextAlignView
+        android:id="@+id/practice10_set_text_align_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice09StrokeCapView
-        android:id="@+id/stroke_cap_view"
+    <com.customizeview.view3.Practice11GetFontSpacingView
+        android:id="@+id/practice11_get_font_spacing_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice10StrokeJoinView
-        android:id="@+id/stroke_join_view"
+    <com.customizeview.view3.Practice12MeasureTextView
+        android:id="@+id/practice12_measure_text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice11StrokeMiterView
-        android:id="@+id/stroke_miter_view"
+    <com.customizeview.view3.Practice13GetTextBoundsView
+        android:id="@+id/practice13_get_text_bounds_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice12PathEffectView
-        android:id="@+id/path_effect_view"
+    <com.customizeview.view3.Practice14GetFontMetricsView
+        android:id="@+id/practice14_get_font_metrics_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"/>
-    <com.customizeview.view2.Practice13ShadowLayerView
-        android:id="@+id/shadow_layer_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
-    <com.customizeview.view2.Practice14MaskFilterView
-        android:id="@+id/mask_filter_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
-    <com.customizeview.view2.Practice15FillPathView
-        android:id="@+id/fill_path_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
-    <com.customizeview.view2.Practice16TextPathView
-        android:id="@+id/text_path_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+
+
 </LinearLayout>

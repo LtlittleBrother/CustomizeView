@@ -48,7 +48,7 @@ class CustomizeViewTwo: BaseActivity() {
     }
 
     override fun initUI() {
-        mCommonTitleView.setCenterTitleText("自定义VIEW2")
+        mCommonTitleView.setCenterTitleText("自定义 View 1-2 Paint 详解")
     }
 
     override fun initData() {
