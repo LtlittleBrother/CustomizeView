@@ -11,9 +11,9 @@ import com.customizeview.R
 import com.customizeview.view3.*
 
 
-class CustomizeViewThreeFragment : Fragment(){
+class CustomizeViewFourFragment : Fragment(){
 
-    private val TAB_FRAGMENT_TYPE_DATA = "customize_view_two_fragment"
+    private val TAB_FRAGMENT_TYPE_DATA = "customize_view_four_fragment"
 
     private var mView: View? = null
 
@@ -41,8 +41,8 @@ class CustomizeViewThreeFragment : Fragment(){
     private lateinit var practice13GetTextBoundsView: Practice13GetTextBoundsView
     private lateinit var practice14GetFontMetricsView: Practice14GetFontMetricsView
 
-    fun newInstance(data: String): CustomizeViewThreeFragment{
-        val fragment = CustomizeViewThreeFragment()
+    fun newInstance(data: String): CustomizeViewFourFragment{
+        val fragment = CustomizeViewFourFragment()
         val bundle = Bundle()
         bundle.putSerializable(TAB_FRAGMENT_TYPE_DATA,data)
         fragment.arguments = bundle

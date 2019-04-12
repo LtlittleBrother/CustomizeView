@@ -1,57 +1,39 @@
 package com.customizeview.activity
 
-import android.content.Context
-import android.content.Intent
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import com.customizeview.R
-import com.customizeview.adapter.CustomizeViewThreeFgAdapter
+import com.customizeview.adapter.CustomizeViewFourFgAdapter
 import com.fiction.activity.BaseActivity
 import com.fiction.view.CommonTitleView
 
-class CustomizeViewThree : BaseActivity() {
+class CustomizeViewFour : BaseActivity(){
 
     private lateinit var mCommonTitleView: CommonTitleView
     private lateinit var mViewPager: ViewPager
     private lateinit var mTabLayout: TabLayout
-
-    private lateinit var tabAdapter: CustomizeViewThreeFgAdapter
     private lateinit var mList: ArrayList<String>
 
-    companion object {
-        fun toCustomizeViewThreePage(context: Context){
-            val intent = Intent(context,CustomizeViewThree::class.java)
-            context.startActivity(intent)
-        }
-    }
+    private lateinit var tabAdapter: CustomizeViewFourFgAdapter
 
     override fun getLayoutResId(): Int {
-        return R.layout.activity_customize_view_three
+        return R.layout.activity_customize_view_four
     }
 
     override fun findViews() {
-        mCommonTitleView = findView(R.id.main_title_three)
-        super.titleView = mCommonTitleView
-        mViewPager = findView(R.id.main_view_page_three)
-        mTabLayout = findView(R.id.main_tab_layout_three)
-        mList = ArrayList()
+        mCommonTitleView = findView(R.id.main_title_four)
+        mViewPager = findView(R.id.main_view_page_four)
+        mTabLayout = findView(R.id.main_tab_layout_four)
+
     }
 
     override fun setEvent() {
-        mCommonTitleView.setMainClickListener(object : CommonTitleView.OnMainClickListener{
-            override fun onLeftClick() {
-                finish()
-            }
 
-            override fun onRightClick() {
-
-            }
-        })
     }
 
     override fun initUI() {
         mCommonTitleView.setLeftCloseIvVisibility(true)
-        mCommonTitleView.setCenterTitleText("自定义 View 1-3 文字的绘制")
+        mCommonTitleView.setCenterTitleText("自定义 View 1-4 Canvas 对绘制的辅助 ")
         mCommonTitleView.setRightItemText("更多")
     }
 
@@ -60,7 +42,7 @@ class CustomizeViewThree : BaseActivity() {
     }
 
     private fun initChannelView(){
-        tabAdapter = CustomizeViewThreeFgAdapter(supportFragmentManager)
+        tabAdapter = CustomizeViewFourFgAdapter(supportFragmentManager)
         initPageData()
         initChannerlUi()
     }

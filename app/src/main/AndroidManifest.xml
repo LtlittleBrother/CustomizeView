@@ -22,10 +22,9 @@
         <activity
                 android:name=".activity.TimeSelectorActivity"
                 android:screenOrientation="portrait"/>
-        <activity android:name=".activity.ImageViewActivity">
-        </activity>
-        <activity android:name=".activity.CustomizeViewThree">
-        </activity>
+        <activity android:name=".activity.ImageViewActivity"/>
+        <activity android:name=".activity.CustomizeViewThree"/>
+        <activity android:name=".activity.CustomizeViewFour"/>
     </application>
 
 </manifest>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_50_dip"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/dianyou_color_222222"
+        android:gravity="center"/>
+
+    <com.customizeview.view3.Practice01DrawTextView
+        android:id="@+id/practice01_draw_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice01drawTextOnPath
+        android:id="@+id/practice01_draw_text_on_path"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <com.customizeview.view3.Practice02StaticLayoutView
+        android:id="@+id/practice02_static_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice03SetTextSizeView
+        android:id="@+id/practice03_set_text_size_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice04SetTypefaceView
+        android:id="@+id/practice04_set_type_face_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice05SetFakeBoldTextView
+        android:id="@+id/practice05_set_fake_bold_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice06SetStrikeThruTextView
+        android:id="@+id/practice06_set_strike_thru_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice07SetUnderlineTextView
+        android:id="@+id/practice07_set_under_line_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice08SetTextSkewXView
+        android:id="@+id/practice08_set_text_skew_x_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice09SetTextScaleXView
+        android:id="@+id/practice09_set_text_scale_x_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice10SetTextAlignView
+        android:id="@+id/practice10_set_text_align_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice11GetFontSpacingView
+        android:id="@+id/practice11_get_font_spacing_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice12MeasureTextView
+        android:id="@+id/practice12_measure_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice13GetTextBoundsView
+        android:id="@+id/practice13_get_text_bounds_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <com.customizeview.view3.Practice14GetFontMetricsView
+        android:id="@+id/practice14_get_font_metrics_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+
+</LinearLayout>
