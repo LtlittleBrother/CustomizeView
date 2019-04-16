@@ -5,7 +5,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <com.fiction.view.CommonTitleView
+    <TextView
         android:id="@+id/title_tv"
         android:layout_width="match_parent"
         android:layout_height="@dimen/game_center_dimen_50_dip"
@@ -13,6 +13,41 @@
         android:textColor="@color/dianyou_color_222222"
         android:gravity="center"/>
 
+    <com.customizeview.view4.Practice01ClipRect
+        android:id="@+id/practice_01_clip_rect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view4.Practice02ClipPath
+        android:id="@+id/practice_02_clip_path"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view4.Practice03Translate
+        android:id="@+id/practice_03_translate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view4.Practice04Rotate
+        android:id="@+id/practice_04_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view4.Practice05Scale
+        android:id="@+id/practice_05_cale"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.customizeview.view4.Practice06Skew
+        android:id="@+id/practice_06_skew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
 
 
 </LinearLayout>

@@ -1,5 +1,7 @@
 package com.customizeview.activity
 
+import android.content.Context
+import android.content.Intent
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import com.customizeview.R
@@ -16,12 +18,20 @@ class CustomizeViewFour : BaseActivity(){
 
     private lateinit var tabAdapter: CustomizeViewFourFgAdapter
 
+    companion object {
+        fun toCustomizeViewFourPage(context: Context){
+            val intent = Intent(context,CustomizeViewFour::class.java)
+            context.startActivity(intent)
+        }
+    }
+
     override fun getLayoutResId(): Int {
         return R.layout.activity_customize_view_four
     }
 
     override fun findViews() {
         mCommonTitleView = findView(R.id.main_title_four)
+        super.titleView = mCommonTitleView
         mViewPager = findView(R.id.main_view_page_four)
         mTabLayout = findView(R.id.main_tab_layout_four)
 
@@ -63,21 +73,21 @@ class CustomizeViewFour : BaseActivity(){
     }
 
     private fun setList() {
-        mList.add("Practice01DrawTextView")
-        mList.add("Practice01drawTextOnPath")
-        mList.add("Practice02StaticLayoutView")
-        mList.add("Practice03SetTextSizeView")
-        mList.add("Practice04SetTypefaceView")
-        mList.add("Practice05SetFakeBoldTextView")
-        mList.add("Practice06SetStrikeThruTextView")
-        mList.add("Practice07SetUnderlineTextView")
-        mList.add("Practice08SetTextSkewXView")
-        mList.add("Practice09SetTextScaleXView")
-        mList.add("Practice10SetTextAlignView")
-        mList.add("Practice11GetFontSpacingView")
-        mList.add("Practice12MeasureTextView")
-        mList.add("Practice13GetTextBoundsView")
-        mList.add("Practice14GetFontMetricsView")
+        mList = ArrayList()
+        mList.add("Practice01ClipRect")
+        mList.add("Practice02ClipPath")
+        mList.add("Practice03Translate")
+        mList.add("Practice04Rotate")
+        mList.add("Practice05Scale")
+        mList.add("Practice06Skew")
+//        mList.add("Practice07ClipPath")
+//        mList.add("Practice08ClipPath")
+//        mList.add("Practice09ClipPath")
+//        mList.add("Practice10ClipPath")
+//        mList.add("Practice11ClipPath")
+//        mList.add("Practice12ClipPath")
+//        mList.add("Practice13ClipPath")
+//        mList.add("Practice14ClipPath")
     }
 
 }

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.customizeview.R
 import com.customizeview.view3.*
+import com.customizeview.view4.*
 
 
 class CustomizeViewFourFragment : Fragment(){
@@ -25,21 +26,12 @@ class CustomizeViewFourFragment : Fragment(){
     private lateinit var mTitle: TextView
 
     /**view*/
-    private lateinit var practice01DrawTextView: Practice01DrawTextView
-    private lateinit var practice01drawTextOnPath: Practice01drawTextOnPath
-    private lateinit var practice02StaticLayoutView: Practice02StaticLayoutView
-    private lateinit var practice03SetTextSizeView: Practice03SetTextSizeView
-    private lateinit var practice04SetTypefaceView: Practice04SetTypefaceView
-    private lateinit var practice05SetFakeBoldTextView: Practice05SetFakeBoldTextView
-    private lateinit var practice06SetStrikeThruTextView: Practice06SetStrikeThruTextView
-    private lateinit var practice07SetUnderlineTextView: Practice07SetUnderlineTextView
-    private lateinit var practice08SetTextSkewXView: Practice08SetTextSkewXView
-    private lateinit var practice09SetTextScaleXView: Practice09SetTextScaleXView
-    private lateinit var practice10SetTextAlignView: Practice10SetTextAlignView
-    private lateinit var practice11GetFontSpacingView: Practice11GetFontSpacingView
-    private lateinit var practice12MeasureTextView: Practice12MeasureTextView
-    private lateinit var practice13GetTextBoundsView: Practice13GetTextBoundsView
-    private lateinit var practice14GetFontMetricsView: Practice14GetFontMetricsView
+    private lateinit var clipRect: Practice01ClipRect
+    private lateinit var clipPath: Practice02ClipPath
+    private lateinit var translate: Practice03Translate
+    private lateinit var rotate: Practice04Rotate
+    private lateinit var scale: Practice05Scale
+    private lateinit var skew: Practice06Skew
 
     fun newInstance(data: String): CustomizeViewFourFragment{
         val fragment = CustomizeViewFourFragment()
@@ -53,7 +45,7 @@ class CustomizeViewFourFragment : Fragment(){
         val arguments = arguments
         data = arguments!!.getString(TAB_FRAGMENT_TYPE_DATA)
         if (mView == null){
-            mView = inflater.inflate(R.layout.customize_view_three_fragment_layout,container,false)
+            mView = inflater.inflate(R.layout.customize_view_four_fragment_layout,container,false)
         }
         findView(mView!!)
         return mView
@@ -63,65 +55,29 @@ class CustomizeViewFourFragment : Fragment(){
     fun findView(mView: View){
         mTitle = mView.findViewById(R.id.title_tv)
         when (data) {
-            "Practice01DrawTextView" -> {
-                practice01DrawTextView = mView.findViewById(R.id.practice01_draw_text_view)
-                practice01DrawTextView.visibility = View.VISIBLE
+            "Practice01ClipRect" -> {
+                clipRect = mView.findViewById(R.id.practice_01_clip_rect)
+                clipRect.visibility = View.VISIBLE
             }
-            "Practice01drawTextOnPath" ->{
-                practice01drawTextOnPath = mView.findViewById(R.id.practice01_draw_text_on_path)
-                practice01drawTextOnPath.visibility = View.VISIBLE
+            "Practice02ClipPath" ->{
+                clipPath = mView.findViewById(R.id.practice_02_clip_path)
+                clipPath.visibility = View.VISIBLE
             }
-            "Practice02StaticLayoutView" -> {
-                practice02StaticLayoutView = mView.findViewById(R.id.practice02_static_layout_view)
-                practice02StaticLayoutView.visibility = View.VISIBLE
+            "Practice03Translate" -> {
+                translate = mView.findViewById(R.id.practice_03_translate)
+                translate.visibility = View.VISIBLE
             }
-            "Practice03SetTextSizeView" -> {
-                practice03SetTextSizeView = mView.findViewById(R.id.practice03_set_text_size_view)
-                practice03SetTextSizeView.visibility = View.VISIBLE
+            "Practice04Rotate" -> {
+                rotate = mView.findViewById(R.id.practice_04_rotate)
+                rotate.visibility = View.VISIBLE
             }
-            "Practice04SetTypefaceView" -> {
-                practice04SetTypefaceView = mView.findViewById(R.id.practice04_set_type_face_view)
-                practice04SetTypefaceView.visibility = View.VISIBLE
+            "Practice05Scale" -> {
+                scale = mView.findViewById(R.id.practice_05_cale)
+                scale.visibility = View.VISIBLE
             }
-            "Practice05SetFakeBoldTextView" -> {
-                practice05SetFakeBoldTextView = mView.findViewById(R.id.practice05_set_fake_bold_text_view)
-                practice05SetFakeBoldTextView.visibility = View.VISIBLE
-            }
-            "Practice06SetStrikeThruTextView" -> {
-                practice06SetStrikeThruTextView = mView.findViewById(R.id.practice06_set_strike_thru_text_view)
-                practice06SetStrikeThruTextView.visibility = View.VISIBLE
-            }
-            "Practice07SetUnderlineTextView" -> {
-                practice07SetUnderlineTextView = mView.findViewById(R.id.practice07_set_under_line_text_view)
-                practice07SetUnderlineTextView.visibility = View.VISIBLE
-            }
-            "Practice08SetTextSkewXView" -> {
-                practice08SetTextSkewXView = mView.findViewById(R.id.practice08_set_text_skew_x_view)
-                practice08SetTextSkewXView.visibility = View.VISIBLE
-            }
-            "Practice09SetTextScaleXView" -> {
-                practice09SetTextScaleXView = mView.findViewById(R.id.practice09_set_text_scale_x_view)
-                practice09SetTextScaleXView.visibility = View.VISIBLE
-            }
-            "Practice10SetTextAlignView" -> {
-                practice10SetTextAlignView = mView.findViewById(R.id.practice10_set_text_align_view)
-                practice10SetTextAlignView.visibility = View.VISIBLE
-            }
-            "Practice11GetFontSpacingView" -> {
-                practice11GetFontSpacingView = mView.findViewById(R.id.practice11_get_font_spacing_view)
-                practice11GetFontSpacingView.visibility = View.VISIBLE
-            }
-            "Practice12MeasureTextView" -> {
-                practice12MeasureTextView = mView.findViewById(R.id.practice12_measure_text_view)
-                practice12MeasureTextView.visibility = View.VISIBLE
-            }
-            "Practice13GetTextBoundsView" -> {
-                practice13GetTextBoundsView = mView.findViewById(R.id.practice13_get_text_bounds_view)
-                practice13GetTextBoundsView.visibility = View.VISIBLE
-            }
-            "Practice14GetFontMetricsView" -> {
-                practice14GetFontMetricsView = mView.findViewById(R.id.practice14_get_font_metrics_view)
-                practice14GetFontMetricsView.visibility = View.VISIBLE
+            "Practice06Skew" -> {
+                skew = mView.findViewById(R.id.practice_06_skew)
+                skew.visibility = View.VISIBLE
             }
         }
     }
