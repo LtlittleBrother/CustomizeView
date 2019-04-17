@@ -23,19 +23,17 @@ class Practice02ClipPath : View {
         val bitmap = BitmapFactory.decodeResource(resources, R.drawable.dianyou_im_greedy_snake_icon)
         canvas!!.drawBitmap(bitmap,0f,0f,paint)
 
-//        paint.color = Color.RED
         path.addCircle(bitmap.width/2.toFloat(), 800f, 200f, Path.Direction.CCW)
         canvas.save()
         canvas.clipPath(path)
         canvas.drawBitmap(bitmap,0f,600f, paint)
         canvas.restore()
 
-//        canvas.drawBitmap(bitmap,50+(bitmap.width).toFloat(),0f,paint)
         val path2 = Path()
-        path2.addCircle(bitmap.width*2.toFloat(),300f,200f,Path.Direction.CCW)
+        path2.addCircle(bitmap.width+(bitmap.width/2).toFloat(),300f,250f,Path.Direction.CW)
         canvas.save()
-        canvas.clipPath(path2)
-        canvas.drawBitmap(bitmap,bitmap.width+(bitmap.width/2).toFloat(),0f,paint)
+        canvas.clipPath(path2,Region.Op.XOR)/**多种样式可选择*/
+        canvas.drawBitmap(bitmap,(bitmap.width+50).toFloat(),0f,paint)
         canvas.restore()
 
     }
