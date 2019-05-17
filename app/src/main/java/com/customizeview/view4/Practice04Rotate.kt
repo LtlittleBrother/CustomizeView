@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
@@ -16,6 +17,9 @@ import com.customizeview.R
  * */
 class Practice04Rotate : View {
 
+    private var rotateDegree = 0f
+    private var px = 100f
+    private var py = 100f
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
@@ -26,13 +30,32 @@ class Practice04Rotate : View {
         super.onDraw(canvas)
         val paint = Paint()
         val bitmap = BitmapFactory.decodeResource(resources, R.drawable.dianyou_im_greedy_snake_icon)
-        canvas!!.drawBitmap(bitmap,0f,0f,paint)
 
-        canvas.save()
-        canvas.rotate(45f,(bitmap.width+50+bitmap.width/2).toFloat(),(bitmap.height/2).toFloat())
-        canvas.drawBitmap(bitmap,(bitmap.width+50).toFloat(),0f,paint)
+        canvas!!.save()
+        canvas.rotate(rotateDegree,px,py)
+        canvas.drawBitmap(bitmap,300f,200f,paint)
         canvas.restore()
 
-
+        paint.color = Color.RED
+        paint.style = Paint.Style.FILL
+        paint.strokeWidth = 20f
+        canvas.drawPoint(px,py,paint)
     }
+
+    fun setRotateDegree(rotateDegree: Int){
+        val rotateDegreeNew = rotateDegree - 360
+        this.rotateDegree = rotateDegreeNew.toFloat()
+        invalidate()
+    }
+
+    fun setPx(px: Int){
+        this.px = px.toFloat()
+        invalidate()
+    }
+
+    fun setPy(py: Int){
+        this.py = py.toFloat()
+        invalidate()
+    }
+
 }

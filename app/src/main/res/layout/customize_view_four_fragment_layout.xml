@@ -1,53 +1,308 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
     <TextView
-        android:id="@+id/title_tv"
+        android:id="@+id/rotate_tv"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="rotate"
+        android:textColor="@color/dianyou_color_222222"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/rotate_seek_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rotate_seek_bar" />
+
+    <SeekBar
+        android:id="@+id/rotate_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/camera_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rotate_tv" />
+
+    <TextView
+        android:id="@+id/camera_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="camera"
+        android:textColor="@color/dianyou_color_222222"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_seek_bar"
+        app:layout_constraintEnd_toEndOf="@+id/rotate_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/camera_seek_bar" />
+
+    <SeekBar
+        android:id="@+id/camera_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/game_center_dimen_50_dip"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/camera_tv" />
+
+    <RadioGroup
+        android:id="@+id/selector_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/scale_ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+        android:id="@+id/rotate_x_rbt"
+        android:layout_width="@dimen/game_center_dimen_0_dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="rotateX"
+        android:textColor="@color/dianyou_color_222222"
+        android:textSize="@dimen/sp_15" />
+
+        <RadioButton
+        android:id="@+id/rotate_y_rbt"
+        android:layout_width="@dimen/game_center_dimen_0_dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="rotateY"
+        android:textColor="@color/dianyou_color_222222"
+        android:textSize="@dimen/sp_15" />
+
+        <RadioButton
+        android:id="@+id/rotate_z_rbt"
+        android:layout_width="@dimen/game_center_dimen_0_dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="rotateZ"
+        android:textColor="@color/dianyou_color_222222"
+        android:textSize="@dimen/sp_15" />
+
+        <RadioButton
+        android:id="@+id/rotate_xyz_rbt"
+        android:layout_width="@dimen/game_center_dimen_0_dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="rotateXYZ"
+        android:textColor="@color/dianyou_color_222222"
+        android:textSize="@dimen/sp_15" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/scale_ll"
         android:layout_width="match_parent"
         android:layout_height="@dimen/game_center_dimen_50_dip"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/radius_ll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone">
+        <TextView
+        android:id="@+id/scale_tv"
+        android:layout_width="@dimen/game_center_dimen_60_dip"
+        android:layout_height="match_parent"
+        android:text="放缩"
         android:textSize="@dimen/sp_15"
-        android:textColor="@color/dianyou_color_222222"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textColor="@color/dianyou_color_222222"/>
+
+        <SeekBar
+        android:id="@+id/scale_sb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/radius_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_50_dip"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/rotate_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/radius_tv"
+            android:layout_width="@dimen/game_center_dimen_60_dip"
+            android:layout_height="match_parent"
+            android:text="半径"
+            android:textSize="@dimen/sp_15"
+            android:gravity="center"
+            android:textColor="@color/dianyou_color_222222"/>
+
+        <SeekBar
+            android:id="@+id/radius_sb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
 
     <com.customizeview.view4.Practice01ClipRect
         android:id="@+id/practice_01_clip_rect"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.customizeview.view4.Practice02ClipPath
         android:id="@+id/practice_02_clip_path"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.customizeview.view4.Practice03Translate
         android:id="@+id/practice_03_translate"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.customizeview.view4.Practice04Rotate
         android:id="@+id/practice_04_rotate"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.customizeview.view4.Practice05Scale
         android:id="@+id/practice_05_cale"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.customizeview.view4.Practice06Skew
         android:id="@+id/practice_06_skew"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <com.customizeview.view4.SetPolyToPoly
+        android:id="@+id/set_poly_to_poly"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-</LinearLayout>
+    <com.customizeview.view4.Practice07MatrixTranslate
+        android:id="@+id/practice_07_matrix_translate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.customizeview.view4.Practice08MatrixScale
+        android:id="@+id/practice_08_matrix_scale"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.customizeview.view4.Practice09MatrixRotate
+        android:id="@+id/practice_09_matrix_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.customizeview.view4.Practice10MatrixSkew
+        android:id="@+id/practice_10_matrix_skew"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.customizeview.view4.Practice11CameraRotate
+        android:id="@+id/practice_11_matrix_camera_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.customizeview.view4.Practice12CameraRotateFixed
+        android:id="@+id/practice_12_matrix_camera_rotate_fixed"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.customizeview.view4.Practice13CameraRotateHittingFace
+        android:id="@+id/practice_13_matrix_camera_rotate_hitting_face"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.customizeview.view4.Practice14Flipboard
+        android:id="@+id/practice_14_flipboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/selector_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

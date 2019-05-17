@@ -80,14 +80,15 @@ class CustomizeViewFour : BaseActivity(){
         mList.add("Practice04Rotate")
         mList.add("Practice05Scale")
         mList.add("Practice06Skew")
-//        mList.add("Practice07ClipPath")
-//        mList.add("Practice08ClipPath")
-//        mList.add("Practice09ClipPath")
-//        mList.add("Practice10ClipPath")
-//        mList.add("Practice11ClipPath")
-//        mList.add("Practice12ClipPath")
-//        mList.add("Practice13ClipPath")
-//        mList.add("Practice14ClipPath")
+        mList.add("Practice07MatrixTranslate")
+        mList.add("Practice08MatrixScale")
+        mList.add("Practice09MatrixRotate")
+        mList.add("Practice10MatrixSkew")
+        mList.add("Practice11CameraRotate")
+        mList.add("Practice12CameraRotateFixed")
+        mList.add("Practice13CameraRotateHittingFace")
+        mList.add("Practice14Flipboard")
+        mList.add("SetPolyToPoly")
     }
 
 }

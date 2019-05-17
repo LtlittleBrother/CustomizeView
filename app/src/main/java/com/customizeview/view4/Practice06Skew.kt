@@ -15,6 +15,10 @@ import com.customizeview.R
  * */
 class Practice06Skew : View {
 
+    private var sx = 0f
+    private var sy = 0f
+
+    private var direction = 2
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
@@ -25,16 +29,35 @@ class Practice06Skew : View {
         super.onDraw(canvas)
         val paint = Paint()
         val bitmap = BitmapFactory.decodeResource(resources, R.drawable.dianyou_im_greedy_snake_icon)
-        canvas!!.drawBitmap(bitmap,0f,0f,paint)
-
-        canvas.save()
-        canvas.skew(0.1f,0f)/***/
-        canvas.drawBitmap(bitmap,(bitmap.width+50).toFloat(),0f,paint)
+        canvas!!.save()
+        canvas.skew(sx,sy)/***/
+        canvas.drawBitmap(bitmap,300f,200f,paint)
         canvas.restore()
+    }
 
-        canvas.save()
-        canvas.skew(-0.1f,0f)/***/
-        canvas.drawBitmap(bitmap,300f,(bitmap.height+50).toFloat(),paint)
-        canvas.restore()
+    fun setSkewX(sx: Int){
+        val sxNew = sx.toFloat()/100
+        if (direction == 2){
+            this.sx = sxNew
+        }else{
+            this.sx = -sxNew
+        }
+        invalidate()
+    }
+
+    fun setSkewY(sy: Int){
+        val syNew = sy.toFloat()/100
+        if (direction == 2){
+            this.sy = syNew
+        }else{
+            this.sy = -syNew
+        }
+        invalidate()
+    }
+
+
+    fun setDirection(direction: Int){
+        this.direction = direction
+        invalidate()
     }
 }

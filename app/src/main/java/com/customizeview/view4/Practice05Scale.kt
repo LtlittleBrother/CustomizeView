@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
@@ -16,6 +17,12 @@ import com.customizeview.R
  * */
 class Practice05Scale : View {
 
+    private var sx = 0.5f
+    private var sy = 0.5f
+
+    private var px = 300f
+    private var py = 200f
+
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
@@ -26,16 +33,41 @@ class Practice05Scale : View {
         super.onDraw(canvas)
         val paint = Paint()
         val bitmap = BitmapFactory.decodeResource(resources, R.drawable.dianyou_im_greedy_snake_icon)
-        canvas!!.drawBitmap(bitmap,0f,0f,paint)
 
-        canvas.save()
-        canvas.scale(0.5f, 0.5f,(bitmap.width+50+bitmap.width/2).toFloat(),(bitmap.height/2).toFloat())
-        canvas.drawBitmap(bitmap,(bitmap.width+50).toFloat(),0f,paint)
+        canvas!!.save()
+        canvas.scale(sx, sy,px,py)
+        canvas.drawBitmap(bitmap,300f,200f,paint)
         canvas.restore()
 
-        canvas.save()
-        canvas.scale(1.3f, 1.3f,(bitmap.width+50+bitmap.width/2).toFloat(),(bitmap.height/2).toFloat())
-        canvas.drawBitmap(bitmap,100f,(bitmap.height+50).toFloat(),paint)
-        canvas.restore()
+        paint.color = Color.RED
+        paint.style = Paint.Style.FILL
+        paint.strokeWidth = 20f
+        canvas.drawPoint(px,py,paint)
+        paint.textSize = 50f
+        canvas.drawText("x$px\ny$py",px+20f,py,paint)
     }
+
+    fun setSx(sx: Int){
+        val sxNew = sx.toFloat()/100
+        this.sx = sxNew
+        invalidate()
+    }
+
+    fun setSy(sy: Int){
+        val syNew = sy.toFloat()/100
+        this.sy = syNew
+        invalidate()
+    }
+
+    fun setPx(px: Int){
+        this.px = px.toFloat()
+        invalidate()
+    }
+
+    fun setPy(py: Int){
+        this.py = py.toFloat()
+        invalidate()
+    }
+
+
 }

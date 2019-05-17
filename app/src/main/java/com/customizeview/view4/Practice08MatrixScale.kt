@@ -4,21 +4,15 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
+import android.graphics.Matrix
 import android.graphics.Paint
-import android.graphics.Path
 import android.util.AttributeSet
 import android.view.View
 import com.customizeview.R
-
 /**
- * Canvas.translate(float dx, float dy) 平移
- *参数里的 dx 和 dy 表示横向和纵向的位移。
- *
+ * 使用Matrix.postScale()放缩
  * */
-class Practice03Translate : View {
-
-    private var translateX = 0f
-    private var translateY = 0f
+class Practice08MatrixScale: View {
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
@@ -27,24 +21,15 @@ class Practice03Translate : View {
     @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-
-
         val paint = Paint()
-        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.dianyou_im_greedy_snake_icon)
+        val matrix = Matrix()
         canvas!!.save()
-        canvas.translate(translateX,translateY)
-        canvas.drawBitmap(bitmap,0f,0f,paint)
+        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.dianyou_im_greedy_snake_icon)
+        matrix.postScale(1.3f,1.3f)
+        canvas.concat(matrix)
+        canvas.drawBitmap(bitmap,100f,bitmap.height.toFloat() +100,paint)
         canvas.restore()
-    }
 
-    fun setTranslateX(translateX: Float){
-        this.translateX = translateX
-        invalidate()
+        canvas.drawBitmap(bitmap,0f,0f,paint)
     }
-
-    fun setTranslateY(translateY: Float){
-        this.translateY = translateY
-        invalidate()
-    }
-
 }

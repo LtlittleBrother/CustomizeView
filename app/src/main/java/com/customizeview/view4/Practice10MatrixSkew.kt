@@ -4,21 +4,17 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
+import android.graphics.Matrix
 import android.graphics.Paint
-import android.graphics.Path
 import android.util.AttributeSet
 import android.view.View
 import com.customizeview.R
 
 /**
- * Canvas.translate(float dx, float dy) 平移
- *参数里的 dx 和 dy 表示横向和纵向的位移。
- *
+ * 使用Matrix.postSkew() 错切
+ * 参数里的 sx 和 sy 是 x 方向和 y 方向的错切系数。
  * */
-class Practice03Translate : View {
-
-    private var translateX = 0f
-    private var translateY = 0f
+class Practice10MatrixSkew: View {
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
@@ -27,24 +23,25 @@ class Practice03Translate : View {
     @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-
-
         val paint = Paint()
-        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.dianyou_im_greedy_snake_icon)
+        val matrix = Matrix()
+        val matrix1 = Matrix()
         canvas!!.save()
-        canvas.translate(translateX,translateY)
-        canvas.drawBitmap(bitmap,0f,0f,paint)
+        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.dianyou_im_greedy_snake_icon)
+        matrix.postSkew(0f,0.2f)
+        canvas.concat(matrix)
+        canvas.drawBitmap(bitmap,0f,bitmap.height.toFloat(),paint)
         canvas.restore()
+
+        canvas.save()
+        matrix1.postSkew(0.2f,0.2f,0f,0f)
+        canvas.concat(matrix1)
+        canvas.drawBitmap(bitmap,bitmap.width.toFloat(),0f,paint)
+        canvas.restore()
+
+        canvas.drawBitmap(bitmap,0f,0f,paint)
     }
 
-    fun setTranslateX(translateX: Float){
-        this.translateX = translateX
-        invalidate()
-    }
 
-    fun setTranslateY(translateY: Float){
-        this.translateY = translateY
-        invalidate()
-    }
 
 }
