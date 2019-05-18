@@ -5,51 +5,42 @@ import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
 import com.customizeview.R
+import com.customizeview.util.BitmapUtils
 
 class Practice12CameraRotateFixed: View {
 
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bitmap: Bitmap = BitmapFactory.decodeResource(resources, R.drawable.maps)
-    private var point1 = Point(200, 200)
-    private var point2 = Point(600, 200)
-    private var camera = Camera()
+    private var degree: Int = 45
+    private val mCamera = Camera()
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     override fun onDraw(canvas: Canvas) {
-        super.onDraw(canvas)
+        val bitmap = BitmapUtils.getRawBitmap(resources, R.drawable.maps)
 
-        val bitmapWidth = bitmap.width
-        val bitmapHeight = bitmap.height
-        val center1X = point1.x + bitmapWidth / 2
-        val center1Y = point1.y + bitmapHeight / 2
-        val center2X = point2.x + bitmapWidth / 2
-        val center2Y = point2.y + bitmapHeight / 2
-
-        camera.save()
-        matrix.reset()
-        camera.rotateX(30f)
-        camera.getMatrix(matrix)
-        camera.restore()
-        matrix.preTranslate((-center1X).toFloat(), (-center1Y).toFloat())
-        matrix.postTranslate(center1X.toFloat(), center1Y.toFloat())
+        // 画上半部分
         canvas.save()
-        canvas.concat(matrix)
-        canvas.drawBitmap(bitmap, point1.x.toFloat(), point1.y.toFloat(), paint)
+        canvas.translate((measuredWidth / 2).toFloat(), (measuredHeight / 2).toFloat())
+        canvas.clipRect(-bitmap.width / 2, -bitmap.height / 2, bitmap.width / 2, 0)
+        canvas.drawBitmap(bitmap, (-bitmap.width / 2).toFloat(), (-bitmap.height / 2).toFloat(), null)
         canvas.restore()
 
-        camera.save()
-        matrix.reset()
-        camera.rotateY(30f)
-        camera.getMatrix(matrix)
-        camera.restore()
-        matrix.preTranslate((-center2X).toFloat(), (-center2Y).toFloat())
-        matrix.postTranslate(center2X.toFloat(), center2Y.toFloat())
         canvas.save()
-        canvas.concat(matrix)
-        canvas.drawBitmap(bitmap, point2.x.toFloat(), point2.y.toFloat(), paint)
+        canvas.translate((measuredWidth / 2).toFloat(), (measuredHeight / 2).toFloat())
+        mCamera.save()
+        mCamera.rotateX(degree.toFloat())
+        mCamera.applyToCanvas(canvas)
+        mCamera.restore()
+        canvas.clipRect(-bitmap.width / 2, 0, bitmap.width / 2, bitmap.height / 2)
+        canvas.drawBitmap(bitmap, (-bitmap.width / 2).toFloat(), (-bitmap.height / 2).toFloat(), null)
         canvas.restore()
+        bitmap.recycle()
+    }
+
+    fun setDegree(degree: Int) {
+        val degreeNew = degree-360
+        this.degree = degreeNew
+        invalidate()
     }
 }

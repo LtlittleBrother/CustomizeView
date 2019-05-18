@@ -21,6 +21,7 @@ class Practice09DrawPathView :View{
         super.draw(canvas)
         val paint = Paint()
         var path = Path()
+//        path.quadTo(200f,800f,600f,300f)
         paint.style = Paint.Style.STROKE
         paint.isAntiAlias = true
         paint.color = Color.RED

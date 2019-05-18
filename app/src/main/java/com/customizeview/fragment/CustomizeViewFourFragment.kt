@@ -270,6 +270,8 @@ class CustomizeViewFourFragment : Fragment(){
             }
             "Practice12CameraRotateFixed" -> {
                 cameraRotateFixed = mView.findViewById(R.id.practice_12_matrix_camera_rotate_fixed)
+                rotaeSeekBar.max = 720
+                rotaeSeekBar.progress = 360
                 cameraRotateFixed.visibility = View.VISIBLE
             }
             "Practice13CameraRotateHittingFace" -> {
@@ -477,7 +479,7 @@ class CustomizeViewFourFragment : Fragment(){
                 cameraRotate.setRotateX(progress.toFloat())
             }
             "Practice12CameraRotateFixed" -> {
-
+                cameraRotateFixed.setDegree(progress)
             }
             "Practice13CameraRotateHittingFace" -> {
 

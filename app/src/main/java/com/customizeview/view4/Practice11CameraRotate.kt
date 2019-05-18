@@ -2,10 +2,7 @@ package com.customizeview.view4
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.BitmapFactory
-import android.graphics.Camera
-import android.graphics.Canvas
-import android.graphics.Paint
+import android.graphics.*
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
@@ -22,6 +19,8 @@ class Practice11CameraRotate: View {
 
     private var rotateType: Int? = 1
 
+    private var point = Point(300,200)
+
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
@@ -32,6 +31,7 @@ class Practice11CameraRotate: View {
         val paint = Paint()
         val bitmap = BitmapFactory.decodeResource(resources, R.drawable.maps)
         val camera = Camera()
+
 
         canvas!!.save()
         camera.save() // 保存 Camera 的状态
@@ -50,10 +50,10 @@ class Practice11CameraRotate: View {
                 camera.rotate(rotateX,rotateX-30,rotateX-60) // 旋转 Camera 的三维空间
             }
         }
-        canvas.translate(300f,200f)// 旋转之后把投影移动回来
+        canvas.translate(point.x.toFloat(),point.y.toFloat())// 旋转之后把投影移动回来
         camera.applyToCanvas(canvas) // 把旋转投影到 Canvas
         camera.restore() // 恢复 Camera 的状态
-        canvas.translate(-200f,-200f)// 旋转之前把绘制内容移动到轴心（原点）
+        canvas.translate(-point.x.toFloat(),-point.y.toFloat())// 旋转之前把绘制内容移动到轴心（原点）
         canvas.drawBitmap(bitmap,0f, 0f, paint)
         canvas.restore()
 
