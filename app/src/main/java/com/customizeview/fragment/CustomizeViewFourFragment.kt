@@ -277,6 +277,9 @@ class CustomizeViewFourFragment : Fragment(){
             "Practice13CameraRotateHittingFace" -> {
                 cameraRotateHittingFace = mView.findViewById(R.id.practice_13_matrix_camera_rotate_hitting_face)
                 cameraRotateHittingFace.visibility = View.VISIBLE
+                rotaeSeekBar.max = 10000
+                rotaeSeekBar.progress = 3000
+                mOneTv.text = "进度"
 
             }
             "Practice14Flipboard" -> {
@@ -327,7 +330,7 @@ class CustomizeViewFourFragment : Fragment(){
                 cameraRotate.setCameraLocation(progress.toFloat())
             }
             "Practice12CameraRotateFixed" -> {
-
+                cameraRotateFixed.setLocationZ(progress)
             }
             "Practice13CameraRotateHittingFace" -> {
 
@@ -482,7 +485,7 @@ class CustomizeViewFourFragment : Fragment(){
                 cameraRotateFixed.setDegree(progress)
             }
             "Practice13CameraRotateHittingFace" -> {
-
+                cameraRotateHittingFace.setStartAngle(progress)
             }
             "Practice14Flipboard" -> {
 

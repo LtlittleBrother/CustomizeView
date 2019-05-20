@@ -97,7 +97,7 @@ class Practice12PathEffectView: View {
          * 这也是一个组合效果类的 PathEffect 。不过它是先对目标 Path 使用一个 PathEffect，然后再对这个改变后的 Path 使用另一个 PathEffect。
          * 列：ComposePathEffect(PathEffect, PathEffect);
          * */
-        cancasComposePathEffect(canvas, paint1)
+//        cancasPathDashPathEffect(canvas, paint1)
 
 
     }
