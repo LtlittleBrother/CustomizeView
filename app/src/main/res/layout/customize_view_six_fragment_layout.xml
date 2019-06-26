@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.customizeview.view6.ViewPropertyAnimatorView
+        android:id="@+id/view_property_animator_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+    <com.customizeview.view6.ObjectAnimatorView
+        android:id="@+id/object_animator_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_0_dip"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+    <com.customizeview.view6.InterpolatorView
+        android:id="@+id/interpolator_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_0_dip"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_50_dip"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/reset_et"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/game_center_dimen_50_dip"
+            android:hint="请输入平移量"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/dianyou_color_222222"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:id="@+id/start_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/game_center_dimen_50_dip"
+            android:text="完成"
+            android:gravity="center"
+            android:textColor="@color/dianyou_color_222222"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_18"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/update_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_50_dip"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/dianyou_color_ff5548"
+        android:text="切换Interpolator "
+        android:gravity="center"
+        android:visibility="gone"/>
+
+</LinearLayout>

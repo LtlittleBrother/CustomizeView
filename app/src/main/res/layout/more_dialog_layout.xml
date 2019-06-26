@@ -40,4 +40,12 @@
         android:textColor="@color/dianyou_color_222222"
         android:gravity="center"/>
 
+    <TextView
+        android:id="@+id/animation_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/game_center_dimen_45_dip"
+        android:text="属性动画6"
+        android:textColor="@color/dianyou_color_222222"
+        android:gravity="center"/>
+
 </LinearLayout>

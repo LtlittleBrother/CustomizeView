@@ -30,7 +30,7 @@ class CustomizeViewFour : BaseActivity(){
     }
 
     override fun findViews() {
-        mCommonTitleView = findView(R.id.main_title_four)
+        mCommonTitleView = findView(R.id.six_title_four)
         super.titleView = mCommonTitleView
         mViewPager = findView(R.id.main_view_page_four)
         mTabLayout = findView(R.id.main_tab_layout_four)
