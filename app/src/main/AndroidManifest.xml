@@ -26,6 +26,8 @@
         <activity android:name=".activity.CustomizeViewThree"/>
         <activity android:name=".activity.CustomizeViewFour"/>
         <activity android:name=".activity.CustomizeViewSix"/>
+        <activity android:name=".activity.CustomizeViewSeven"/>
+        <activity android:name=".activity.PraiseActivity" />
     </application>
 
 </manifest>
