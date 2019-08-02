@@ -2,11 +2,17 @@ package com.customizeview.activity
 
 import android.content.Context
 import android.content.Intent
+import android.widget.TextView
+import com.customizeview.NumScrollView
 import com.customizeview.R
 import com.fiction.activity.BaseActivity
 
 class PraiseActivity: BaseActivity() {
 
+    private lateinit var mNumScroll: NumScrollView
+    private lateinit var mPraiseTv: TextView
+
+    private var isPraise = true
 
     companion object {
         fun toPraiseActivityPage(context: Context){
@@ -20,11 +26,15 @@ class PraiseActivity: BaseActivity() {
     }
 
     override fun findViews() {
-
+        mNumScroll = findView(R.id.num_scroll_view)
+        mPraiseTv = findView(R.id.praise_tv)
     }
 
     override fun setEvent() {
-
+        mPraiseTv.setOnClickListener {
+            mNumScroll.upDataNum(isPraise)
+            isPraise = !isPraise
+        }
     }
 
     override fun initUI() {

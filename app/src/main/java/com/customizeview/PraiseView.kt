@@ -1,15 +1,18 @@
 package com.customizeview
 
 import android.animation.Animator
+import android.animation.AnimatorSet
+import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.*
+import android.graphics.BitmapFactory
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
-import android.animation.AnimatorSet
-import android.animation.ArgbEvaluator
 import android.view.animation.LinearInterpolator
 import util.ViewUtil
 
@@ -65,6 +68,12 @@ class PraiseView: View,View.OnClickListener {
     private var circleColor = START_COLOR
 
     private var isPraise = false
+
+    private var praiseNum = 0
+    private val paintText = Paint()
+    private val fontMetrics = Paint.FontMetrics()
+    private val TEXT_COLOR = Color.parseColor("#666666")
+    private val TEXT_TRANLESALE = 16F
 
 
     constructor(context: Context?) : super(context)
@@ -129,12 +138,21 @@ class PraiseView: View,View.OnClickListener {
         canvas.restore()
     }
 
+    private fun drawText(canvas: Canvas?){
+        paintText.textSize = 30f
+        paintText.color = TEXT_COLOR
+        canvas!!.save()
+        canvas.translate(0f,TEXT_TRANLESALE)
+    }
+
+
     fun setBitmpShiningScale(scale: Float){
         this.bitmpShiningScale = scale
         Log.d("liutao", "bitmpShiningScale == $bitmpShiningScale")
         invalidate()
     }
     fun getBitmpShiningScale(): Float{
+
         return PRAISE_SELECTED_SHINING_SCALE_MIN
     }
 
